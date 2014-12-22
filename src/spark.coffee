@@ -179,7 +179,7 @@ module.exports =
         @stubMethod method, (client_id, user, pass) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.reject 'Unknown user'
+            dfd.reject 'invalid_grant'
           , 1
 
           dfd.promise

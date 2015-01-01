@@ -346,6 +346,16 @@ module.exports =
           , 1
           dfd.promise
 
+      when 'flashCore'
+        @stubMethod method, (coreID) ->
+          dfd = whenjs.defer()
+          setTimeout ->
+            dfd.reject
+              code: "ECONNRESET",
+              message: "socket hang up"
+          , 1
+          dfd.promise
+
   stubNullName: (spark, method) ->
     Spark = spark
     @unspyTimers()

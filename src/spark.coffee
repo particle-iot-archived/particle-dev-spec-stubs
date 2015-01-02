@@ -20,11 +20,10 @@ module.exports =
         @stubMethod method, (client_id, user, pass) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               access_token: "0123456789abcdef0123456789abcdef",
               token_type: "bearer",
               expires_in: 7776000
-            }
           , 1
           dfd.promise
 
@@ -62,14 +61,13 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "id": coreID,
               "name": "Online Core",
               "connected": true,
               "variables": { foo: 'int32' },
               "functions": [ 'bar' ],
               "cc3000_patch_version": "1.28"
-            }
           , 1
           dfd.promise
 
@@ -77,10 +75,9 @@ module.exports =
         @stubMethod method, (coreID, name) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "id": coreID,
               "name": name
-            }
           , 1
           dfd.promise
 
@@ -88,9 +85,8 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "ok": true
-            }
           , 1
           dfd.promise
 
@@ -98,12 +94,11 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "ok": true,
               "user_id": "53187f78907210fed300048f",
               "id": coreID,
               "connected": true
-            }
           , 1
           dfd.promise
 
@@ -111,13 +106,12 @@ module.exports =
         @stubMethod method, (files) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "ok": true,
               "binary_id": "53fdb4b3a7ce5fe43d3cf079"
               "binary_url": "/v1/binaries/53fdb4b3a7ce5fe43d3cf079"
               "expires_at": "2014-08-28T10:36:35.183Z"
               "sizeInfo": "   text	   data	    bss	    dec	    hex	filename\n  74960	   1236	  11876	  88072	  15808	build/foo.elf\n"
-            }
           , 1
           dfd.promise
 
@@ -133,15 +127,13 @@ module.exports =
         @stubMethod method, (coreID, name) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               cmd: 'VarReturn',
               name: 'foo',
               result: 1,
-              coreInfo: {
+              coreInfo:
                 last_handshake_at: '2014-09-03T08:59:17.850Z',
                 connected: true
-              }
-            }
           , 1
           dfd.promise
 
@@ -149,13 +141,12 @@ module.exports =
         @stubMethod method, (coreID, functionName, funcParam) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               id: '51ff6e065067545724680187',
               name: 'Online Core',
               last_app: null,
               connected: true,
               return_value: 200
-            }
           , 1
           dfd.promise
 
@@ -163,10 +154,9 @@ module.exports =
         @stubMethod method, (coreID, functionName, funcParam) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               id: '51ff67065067545724380687',
               status: 'Update started'
-            }
           , 1
           dfd.promise
 
@@ -189,11 +179,10 @@ module.exports =
         @stubMethod method, ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "code": 400,
               "error": "invalid_grant",
               "error_description": "The access token provided is invalid."
-            }
           , 1
           dfd.promise
 
@@ -201,10 +190,9 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "error": "Permission Denied",
               "info": "I didn't recognize that device name or ID"
-            }
           , 1
           dfd.promise
 
@@ -212,10 +200,9 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.reject {
+            dfd.reject
               "error": "Permission Denied",
               "info": "I didn't recognize that device name or ID"
-            }
           , 1
           dfd.promise
 
@@ -223,10 +210,9 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.reject {
+            dfd.reject
               "error": "Permission Denied",
               "info": "I didn't recognize that device name or ID"
-            }
           , 1
           dfd.promise
 
@@ -234,12 +220,11 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.reject {
+            dfd.reject
               "ok": false,
               "errors": [
                 "That belongs to someone else"
               ]
-            }
           , 1
           dfd.promise
 
@@ -247,7 +232,7 @@ module.exports =
         @stubMethod method, (files) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "ok": false,
               "errors": [
                 "Blink.cpp: In function 'void setup()':\n\
@@ -258,7 +243,6 @@ module.exports =
               ],
               "output": "App code was invalid",
               "stdout": "Nothing to be done for `all'"
-            }
           , 1
           dfd.promise
 
@@ -274,10 +258,9 @@ module.exports =
         @stubMethod method, (coreID, name) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               ok: false,
               error: 'Variable not found'
-            }
           , 1
           dfd.promise
 
@@ -285,10 +268,9 @@ module.exports =
         @stubMethod method, (coreID, functionName, funcParam) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               ok: false,
               error: 'Function not found'
-            }
           , 1
           dfd.promise
 
@@ -296,9 +278,8 @@ module.exports =
         @stubMethod method, (coreID, functionName, funcParam) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               error: 'Permission Denied'
-            }
           , 1
           dfd.promise
 
@@ -335,14 +316,13 @@ module.exports =
         @stubMethod method, (coreID) ->
           dfd = whenjs.defer()
           setTimeout ->
-            dfd.resolve {
+            dfd.resolve
               "id": coreID,
               "name": "Online Core",
               "connected": false,
               "variables": {},
               "functions": [],
               "cc3000_patch_version": "1.28"
-            }
           , 1
           dfd.promise
 

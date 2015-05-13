@@ -33,24 +33,27 @@ module.exports =
           setTimeout ->
             this._devices = [
               {
+                "id": "51ff67258067545724380687",
+                "name": "Offline Core",
+                "last_app": null,
+                "last_heard": null,
+                "connected": false,
+                "productId": 0
+              }, {
                 "id": "51ff6e065067545724680187",
                 "name": "Online Core",
                 "last_app": null,
                 "last_heard": null,
                 "requires_deep_update": true,
-                "connected": true
-              }, {
-                "id": "51ff67258067545724380687",
-                "name": "Offline Core",
-                "last_app": null,
-                "last_heard": null,
-                "connected": false
+                "connected": true,
+                "productId": 0
               }, {
                 "id": "51ff61258067545724380687",
                 "name": null,
                 "last_app": null,
                 "last_heard": null,
-                "connected": false
+                "connected": false,
+                "productId": 6
               }
             ]
             dfd.resolve this._devices

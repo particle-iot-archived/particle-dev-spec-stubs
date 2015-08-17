@@ -238,11 +238,11 @@ module.exports =
             dfd.resolve
               "ok": false,
               "errors": [
-                "Blink.cpp: In function 'void setup()':\n\
-      Blink.cpp:11:17: error: 'OUTPUTz' was not declared in this scope\n\
-       void setup() {\n\
-                       ^\n\
-      make: *** [Blink.o] Error 1"
+                "Blink.cpp: In function 'void setup()':\n"+
+                "      Blink.cpp:11:17: error: 'OUTPUTz' was not declared in this scope\n"+
+                "       void setup() {\n"+
+                "                       ^\n"+
+                "      make: *** [Blink.o] Error 1"
               ],
               "output": "App code was invalid",
               "stdout": "Nothing to be done for `all'"

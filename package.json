@@ -1,11 +1,11 @@
 {
-  "name": "spark-dev-spec-stubs",
-  "version": "0.0.1",
-  "description": "Collection of spec stubs for Spark Dev",
+  "name": "particle-dev-spec-stubs",
+  "version": "0.0.2",
+  "description": "Collection of spec stubs for Particle Dev",
   "main": "src/main",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spark/spark-dev-spec-stubs.git"
+    "url": "https://github.com/spark/particle-dev-spec-stubs.git"
   },
   "dependencies": {
     "when": "*"
@@ -16,7 +16,7 @@
   },
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/spark/spark-dev-spec-stubs/issues"
+    "url": "https://github.com/spark/particle-dev-spec-stubs/issues"
   },
-  "homepage": "https://github.com/spark/spark-dev-spec-stubs"
+  "homepage": "https://github.com/particle/spark-dev-spec-stubs"
 }

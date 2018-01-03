@@ -5,7 +5,7 @@
   "main": "src/main",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spark/particle-dev-spec-stubs.git"
+    "url": "https://github.com/particle-iot/particle-dev-spec-stubs.git"
   },
   "dependencies": {
     "when": "*"
@@ -16,7 +16,7 @@
   },
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/spark/particle-dev-spec-stubs/issues"
+    "url": "https://github.com/particle-iot/particle-dev-spec-stubs/issues"
   },
   "homepage": "https://github.com/particle/spark-dev-spec-stubs"
 }
